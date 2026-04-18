@@ -15,7 +15,7 @@ const Admin = () => {
         
         if (token) {
           // Verify token with backend
-          const response = await fetch('http://localhost:5000/api/admin/verify', {
+          const response = await fetch('https://fast-marketing-backend.vercel.app/api/admin/verify', {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`
@@ -57,7 +57,7 @@ const Admin = () => {
     localStorage.removeItem('adminExpiry');
     setIsAuthenticated(false);
     // Optional: Call logout API
-    fetch('http://localhost:5000/api/admin/logout', {
+    fetch('https://fast-marketing-backend.vercel.app/api/admin/logout', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('adminToken')}`

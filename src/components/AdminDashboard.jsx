@@ -21,7 +21,7 @@ const AdminDashboard = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/blog/posts');
+      const response = await fetch('https://fast-marketing-backend.vercel.app/api/blog/posts');
       const data = await response.json();
       setPosts(data.posts || []);
     } catch (error) {
@@ -50,8 +50,8 @@ const AdminDashboard = () => {
     };
 
     const url = editingPost 
-      ? `http://localhost:5000/api/blog/posts/${editingPost.id}`
-      : 'http://localhost:5000/api/blog/posts';
+      ? `https://fast-marketing-backend.vercel.app/blog/posts/${editingPost.id}`
+      : 'https://fast-marketing-backend.vercel.app/api/blog/posts';
     
     const method = editingPost ? 'PUT' : 'POST';
 
@@ -85,7 +85,7 @@ const AdminDashboard = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this post?')) {
       try {
-        const response = await fetch(`http://localhost:5000/api/blog/posts/${id}`, {
+        const response = await fetch(`https://fast-marketing-backend.vercel.app/api/blog/posts/${id}`, {
           method: 'DELETE',
           headers: { 'Authorization': `Bearer ${token}` }
         });

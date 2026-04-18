@@ -19,7 +19,7 @@ const Blog = () => {
   const fetchPosts = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/api/blog/posts');
+      const response = await fetch('https://fast-marketing-backend.vercel.app/api/blog/posts');
       const data = await response.json();
       
       if (data.success) {
