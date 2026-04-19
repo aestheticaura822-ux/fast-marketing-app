@@ -50,7 +50,7 @@ const AdminDashboard = () => {
     };
 
     const url = editingPost 
-      ? `https://fast-marketing-backend.vercel.app/blog/posts/${editingPost.id}`
+      ? `https://fast-marketing-backend.vercel.app/api/blog/posts/${editingPost.id}`
       : 'https://fast-marketing-backend.vercel.app/api/blog/posts';
     
     const method = editingPost ? 'PUT' : 'POST';
