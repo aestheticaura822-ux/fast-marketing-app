@@ -19,68 +19,83 @@ const AdminDashboard = () => {
 
   const token = localStorage.getItem('adminToken');
 
-  const fetchPosts = async () => {
-    try {
-      const response = await fetch('https://fast-marketing-backend.vercel.app/api/blog/posts');
-      const data = await response.json();
-      setPosts(data.posts || []);
-    } catch (error) {
-      console.error('Error fetching posts:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
+ const fetchPosts = async () => {
+  try {
+    console.log('🔄 Fetching posts...');
+    const response = await fetch('https://fast-marketing-backend.vercel.app/api/blog/posts');
+    const data = await response.json();
+    console.log('📦 Fetched posts:', data);
+    setPosts(data.posts || []);
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     fetchPosts();
   }, []);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
-    
-    const tagsArray = formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag);
-    
-    const postData = {
-      ...formData,
-      tags: tagsArray,
-      author: 'Admin',
-      readTime: `${Math.ceil(formData.content.split(' ').length / 200)} min read`,
-      date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
-    };
-
-    const url = editingPost 
-      ? `https://fast-marketing-backend.vercel.app/api/blog/posts/${editingPost.id}`
-      : 'https://fast-marketing-backend.vercel.app/api/blog/posts';
-    
-    const method = editingPost ? 'PUT' : 'POST';
-
-    try {
-      const response = await fetch(url, {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify(postData)
-      });
-
-      if (response.ok) {
-        await fetchPosts();
-        setShowForm(false);
-        setEditingPost(null);
-        resetForm();
-      } else {
-        const error = await response.json();
-        alert(error.message || 'Failed to save post');
-      }
-    } catch (error) {
-      console.error('Error saving post:', error);
-      alert('Network error. Please check if backend server is running.');
-    } finally {
-      setSubmitting(false);
-    }
+  e.preventDefault();
+  setSubmitting(true);
+  
+  const tagsArray = formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag);
+  
+  const postData = {
+    title: formData.title,
+    excerpt: formData.excerpt,
+    content: formData.content,
+    category: formData.category,
+    image: formData.image,
+    tags: tagsArray,
+    author: 'Admin',
+    featured: formData.featured,
+    readTime: `${Math.ceil(formData.content.split(' ').length / 200)} min read`
   };
+
+  const API_BASE = 'https://fast-marketing-backend.vercel.app/api';
+  const url = editingPost 
+    ? `${API_BASE}/blog/posts/${editingPost.id}`
+    : `${API_BASE}/blog/posts`;
+  
+  const method = editingPost ? 'PUT' : 'POST';
+
+  console.log('🚀 Sending request to:', url);
+  console.log('📦 Request data:', postData);
+  console.log('🔑 Token:', token);
+
+  try {
+    const response = await fetch(url, {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify(postData)
+    });
+
+    console.log('📡 Response status:', response.status);
+    const data = await response.json();
+    console.log('📡 Response data:', data);
+
+    if (response.ok) {
+  console.log('✅ Post created, refreshing list...');
+  await fetchPosts();  // ✅ Yeh call ho rahi hai ensure karo
+  setShowForm(false);
+  setEditingPost(null);
+  resetForm();
+} else {
+      alert(data.message || 'Failed to save post');
+    }
+  } catch (error) {
+    console.error('❌ Error:', error);
+    alert('Network error: ' + error.message);
+  } finally {
+    setSubmitting(false);
+  }
+};
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this post?')) {
