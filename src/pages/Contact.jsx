@@ -29,7 +29,7 @@ const Contact = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://fast-marketing-backend.vercel.app', {
+      const response = await fetch('https://fast-marketing-backend.vercel.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
