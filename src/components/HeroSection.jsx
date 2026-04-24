@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaPlay, FaArrowDown, FaTrophy, FaClock, FaRocket, FaShieldAlt, FaGlobe, FaStar } from 'react-icons/fa';
+import Link from 'react-router-dom';
+
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState('');
@@ -149,17 +151,21 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex gap-4 justify-center flex-wrap animate-fade-in">
-            <button className="group bg-gradient-to-r from-red-600 to-red-700 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-sm md:text-base hover:shadow-2xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-300 flex items-center gap-2">
-              <FaRocket className="group-hover:translate-x-1 transition-transform" />
-              Deploy Strategy
-            </button>
-            
-            <button className="group bg-white/10 backdrop-blur-md text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-sm md:text-base hover:bg-white/20 transition-all duration-300 border border-white/30 flex items-center gap-2 hover:gap-3 hover:scale-105">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-red-600 to-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <FaPlay size={10} className="ml-0.5" />
-              </div>
-              Consult Free →
-            </button>
+            <Link href="/contact">
+  <button className="group bg-gradient-to-r from-red-600 to-red-700 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-sm md:text-base hover:shadow-2xl hover:shadow-red-500/50 hover:scale-105 transition-all duration-300 flex items-center gap-2">
+    <FaRocket className="group-hover:translate-x-1 transition-transform" />
+    Deploy Strategy
+  </button>
+</Link>
+
+<Link href="/contact">
+  <button className="group bg-white/10 backdrop-blur-md text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-sm md:text-base hover:bg-white/20 transition-all duration-300 border border-white/30 flex items-center gap-2 hover:gap-3 hover:scale-105">
+    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-red-600 to-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+      <FaPlay size={10} className="ml-0.5" />
+    </div>
+    Consult Free →
+  </button>
+</Link>
           </div>
 
           {/* Stats */}

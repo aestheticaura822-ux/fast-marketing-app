@@ -259,14 +259,14 @@ const FAQ = () => {
               <FaEnvelope size={14} className="sm:w-4 sm:h-4" /> Contact Support
             </Link>
             <a
-              href="tel:+923210846667"
+              href="tel:+923317924742"
               className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               <FaPhone size={14} className="sm:w-4 sm:h-4" /> Call Us Now
             </a>
           </div>
           <div className="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-400 px-2">
-            <p className="break-words">📧 Email: xfastgroup001@gmail.com | 📞 Phone: +92 321 0846667</p>
+            <p className="break-words">📧 Email: fastmediaagencyofficial@gmail.com | 📞 Phone: +92 331 7924742</p>
           </div>
         </div>
 

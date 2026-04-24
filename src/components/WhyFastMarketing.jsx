@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaChartLine, FaPalette, FaGlobe, FaRocket, FaShieldAlt, FaMicrochip } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const features = [
   {
@@ -74,9 +75,11 @@ const WhyFastMarketing = () => {
 
             {/* Join Button */}
             <div className="mt-8">
-              <button className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 md:px-8 py-3 rounded-full font-semibold hover:shadow-xl transition">
-                Join our roster →
-              </button>
+              <Link to="/contact">
+  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 md:px-8 py-3 rounded-full font-semibold hover:shadow-xl transition">
+    Join our roster →
+  </button>
+</Link>
             </div>
           </div>
 

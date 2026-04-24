@@ -21,9 +21,9 @@ const Footer = () => {
   ];
   
   const contactInfo = [
-    { icon: '📍', text: '123 Business Avenue, Karachi, Pakistan' },
-    { icon: '📞', text: '+92 300 1234567' },
-    { icon: '✉️', text: 'info@fastmarketing.com' }
+    { icon: '📍', text: 'Main Defence Road, Lahore, Pakistan' },
+    { icon: '📞', text: '+92 3317924742' },
+    { icon: '✉️', text: 'fastmediaagencyofficial@gmail.com' }
   ];
   
   const socialIcons = [

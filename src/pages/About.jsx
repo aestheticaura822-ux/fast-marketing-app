@@ -80,12 +80,17 @@ const About = () => {
                 We are a group of creative minds redefining digital excellence across Pakistan and beyond.
               </p>
               <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
-                <button className="bg-gradient-to-r from-red-600 to-red-700 text-white px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
-                  Visit Works <FaArrowRight size={12} className="sm:w-3.5 sm:h-3.5" />
-                </button>
-                <button className="border-2 border-red-600 text-red-600 px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-red-600 hover:text-white transition-all duration-300">
-                  View Our Catalog
-                </button>
+                <Link to="/services">
+  <button className="bg-gradient-to-r from-red-600 to-red-700 text-white px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+    Visit Works <FaArrowRight size={12} className="sm:w-3.5 sm:h-3.5" />
+  </button>
+</Link>
+
+<Link to="/services">
+  <button className="border-2 border-red-600 text-red-600 px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-red-600 hover:text-white transition-all duration-300">
+    View Our Catalog
+  </button>
+</Link>
               </div>
               
               {/* Stats in Hero - Responsive Grid */}

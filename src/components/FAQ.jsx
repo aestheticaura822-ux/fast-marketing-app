@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaChevronDown, FaCommentDots } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 const faqs = [
   {
     q: "What is Google Ads Cost Per Install (CPI)?",
@@ -65,10 +65,12 @@ const FAQ = () => {
 
         {/* Chat Button */}
         <div className="text-center mt-10 md:mt-12">
-          <button className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold hover:shadow-xl transition group">
-            <FaCommentDots />
-            Chat with us
-          </button>
+          <Link to="/contact">
+  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold hover:shadow-xl transition group">
+    <FaCommentDots />
+    Chat with us
+  </button>
+</Link>
         </div>
       </div>
     </section>
