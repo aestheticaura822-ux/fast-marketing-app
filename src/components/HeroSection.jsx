@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaPlay, FaArrowDown, FaTrophy, FaClock, FaRocket, FaShieldAlt, FaGlobe, FaStar } from 'react-icons/fa';
-import Link from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 
 const HeroSection = () => {
