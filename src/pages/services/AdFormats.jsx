@@ -72,7 +72,7 @@ const AdFormats = () => {
       sizes: ["Exit Intent", "Time-based", "Scroll-triggered", "Click-triggered", "Entry Popup", "Slide-in"],
       stats: "3.2%",
       statLabel: "Conversion Rate",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed2f52a73?w=600",
+      image: "https://pixabay.com/get/g1f859965632a312811e5dc4ceb320b4a4d483b1feb395259bab16ba06677885e380216bd548b253d4a0027dc108f9a88_1920.jpg",
       color: "from-purple-500 to-pink-500"
     },
     {

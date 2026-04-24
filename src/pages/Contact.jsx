@@ -61,7 +61,7 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: <FaEnvelope className="text-xl sm:text-2xl" />, title: "Email Enquiries", value: "xfastgroup001@gmail.com", link: "mailto:fastmediaagencyofficial@gmail.com", color: "from-blue-500 to-cyan-500" },
+    { icon: <FaEnvelope className="text-xl sm:text-2xl" />, title: "Email Enquiries", value: "fastmediaagencyofficial@gmail.com", link: "mailto:fastmediaagencyofficial@gmail.com", color: "from-blue-500 to-cyan-500" },
     { icon: <FaWhatsapp className="text-xl sm:text-2xl" />, title: "WhatsApp Us", value: "+92 331 7924742", link: "https://wa.me/923317924742", color: "from-green-500 to-emerald-500" },
     { icon: <FaPhone className="text-xl sm:text-2xl" />, title: "Direct Call", value: "+92 331 7924742", link: "tel:+923317924742", color: "from-purple-500 to-pink-500" },
     { icon: <FaMapMarkerAlt className="text-xl sm:text-2xl" />, title: "Regional Hub", value: "101A, J1 Block, Valencia Town, Lahore, Pakistan", link: "#", color: "from-red-500 to-orange-500" },
