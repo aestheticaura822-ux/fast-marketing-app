@@ -62,9 +62,9 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: <FaEnvelope className="text-xl sm:text-2xl" />, title: "Email Enquiries", value: "fastmediaagencyofficial@gmail.com", link: "mailto:fastmediaagencyofficial@gmail.com", color: "from-blue-500 to-cyan-500" },
-    { icon: <FaWhatsapp className="text-xl sm:text-2xl" />, title: "WhatsApp Us", value: "+92 331 7924742", link: "https://wa.me/923317924742", color: "from-green-500 to-emerald-500" },
-    { icon: <FaPhone className="text-xl sm:text-2xl" />, title: "Direct Call", value: "+92 331 7924742", link: "tel:+923317924742", color: "from-purple-500 to-pink-500" },
-    { icon: <FaMapMarkerAlt className="text-xl sm:text-2xl" />, title: "Regional Hub", value: "101A, J1 Block, Valencia Town, Lahore, Pakistan", link: "#", color: "from-red-500 to-orange-500" },
+    { icon: <FaWhatsapp className="text-xl sm:text-2xl" />, title: "WhatsApp Us", value: "+1 (604) 239-6141", link: "https://wa.me/1(604)239-6141", color: "from-green-500 to-emerald-500" },
+    { icon: <FaPhone className="text-xl sm:text-2xl" />, title: "Direct Call", value: "+1 (604) 239-6141", link: "tel:+1 (604) 239-6141", color: "from-purple-500 to-pink-500" },
+    { icon: <FaMapMarkerAlt className="text-xl sm:text-2xl" />, title: "Regional Hub", value: "101 Queen Street, West Toronto ON M5H 2N1 CANADA", link: "#", color: "from-red-500 to-orange-500" },
     { icon: <FaClock className="text-xl sm:text-2xl" />, title: "Operational Hours", value: "Mon - Sat: 9AM to 6PM", link: "#", color: "from-indigo-500 to-purple-500" }
   ];
 
@@ -303,7 +303,7 @@ const Contact = () => {
               </div>
               <div className="p-3 sm:p-4 bg-gray-50">
                 <p className="text-xs sm:text-sm text-gray-600 break-words">
-                  📍 101A, J1 Block, Valencia Town Main Defence Road, Lahore, Pakistan
+                  📍 101 Queen Street, West Toronto ON M5H 2N1 CANADA
                 </p>
               </div>
             </div>

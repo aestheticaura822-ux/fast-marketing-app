@@ -21,8 +21,8 @@ const Footer = () => {
   ];
   
   const contactInfo = [
-    { icon: '📍', text: 'Main Defence Road, Lahore, Pakistan' },
-    { icon: '📞', text: '+92 3317924742' },
+    { icon: '📍', text: '101 Queen Street, West Toronto ON M5H 2N1 CANADA' },
+    { icon: '📞', text: '+1 (604) 239-6141' },
     { icon: '✉️', text: 'fastmediaagencyofficial@gmail.com' }
   ];
   
